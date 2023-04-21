@@ -9,9 +9,9 @@ const app = express();
 app.use(cors());
 
 // Proxy Middleware
-app.use(createProxyMiddleware({
-    router: (req) => new URL(req.path.substring(1)),
-    pathRewrite: (req) => (new URL(req.path.substring(1))).pathname,
+app.all('/*', createProxyMiddleware({
+    router: ({ path }) => new URL(path.substring(1)),
+    pathRewrite: (pathloc, { path }) => (new URL(path.substring(1))).pathname,
     changeOrigin: true,
     logger: console
 }));
