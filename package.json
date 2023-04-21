@@ -6,12 +6,17 @@
   "scripts": {
     "start": "node index.js"
   },
-  "keywords": ["cors", "proxy", "express"],
+  "keywords": [
+    "cors",
+    "proxy",
+    "express"
+  ],
   "author": "Harbs Pedro <harbspj@gmail.com>",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.18.2",
-    "http-proxy-middleware": "^2.0.6"
+    "http-proxy-middleware": "^2.0.6",
+    "querystring": "^0.2.1"
   }
 }
